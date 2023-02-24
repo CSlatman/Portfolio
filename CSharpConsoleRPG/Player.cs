@@ -51,4 +51,16 @@ public class Player
         //Sets the boolean that the player has died.
         PlayerIsDead = true;
     }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="heal_value"></param>
+    public void Heal(int heal_value)
+    {
+        PlayerHealth = PlayerHealth + heal_value;
+
+        //Write that the player healed themselves.
+        Console.WriteLine(PlayerName + " healed themselves for " + heal_value + " amounts of hitpoints! You now have " + PlayerHealth + " remaining!");
+    }
 }

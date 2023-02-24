@@ -14,20 +14,23 @@
             Console.WriteLine("What's your name?");
             player.PlayerName = Console.ReadLine();
 
+            //Welcoming the playre and using their name.
             Console.WriteLine("Welcome " + player.PlayerName + ". We're glad to see you!");
 
+
+            //First playre encounter.
             Enemy firstEnemy = new Enemy("Giant Slime");
 
             Console.WriteLine(player.PlayerName + " , you have encountered " + firstEnemy.Name + "! What would you like to do?");
 
-
-
+            
+            // While the first enemy is NOT dead and while the player is NOT dead, continue this combat.
             while (!firstEnemy.IsDead && !player.PlayerIsDead)
             {
                 Console.WriteLine("1. Single Attack.");
                 Console.WriteLine("2. A Three Strike Attack.");
                 Console.WriteLine("3. Defend.");
-                Console.WriteLine("4. Attempt to run away.");
+                Console.WriteLine("4. Heal youreslf.");
 
                 int playerChoice = Convert.ToInt32(Console.ReadLine());
 
@@ -56,7 +59,8 @@
                         break;
                     case 4:
                         {
-                            Console.WriteLine("You ran away successfully. Slimes are not known to be fast. Why did you run?");
+                            Console.WriteLine("You are choosing to heal yourself.");
+                            player.Heal(random.Next(5, 20));
                         }
                         break;
                     default:
