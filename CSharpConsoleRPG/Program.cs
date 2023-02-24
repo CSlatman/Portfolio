@@ -14,14 +14,6 @@
             Console.WriteLine("What's your name?");
             player.PlayerName = Console.ReadLine();
 
-            /*
-             * could write it as a constructor instantly.
-             * Player player = new Player()
-             * {
-             *  Name = Console.Readline()
-             *  };
-             */
-
             Console.WriteLine("Welcome " + player.PlayerName + ". We're glad to see you!");
 
             Enemy firstEnemy = new Enemy("Giant Slime");
@@ -39,33 +31,40 @@
 
                 int playerChoice = Convert.ToInt32(Console.ReadLine());
 
-                if (playerChoice == 1)
+                switch (playerChoice)
                 {
-                    //Writes the result of choosing 1.
-                    Console.WriteLine("You have attacked the slime! How cruel!");
-                    firstEnemy.TakesDamage(random.Next(1, 15));
+                    case 1:
+                        {
+                            Console.WriteLine("You have attacked the slime! How cruel!");
+                            firstEnemy.TakesDamage(random.Next(1, 15));
+                        }
+                        break;
+                    case 2:
+                        {
+                            Console.WriteLine("You have attacked the slime, three times! How mean!");
+                            for (int i = 0; i < 3; i++)
+                            {
+                                firstEnemy.TakesDamage(random.Next(1, 5));
 
-                }
-                else if (playerChoice == 2)
-                {
-                    Console.WriteLine("You have attacked the slime, three times! How mean!");
-                    for (int i = 0; i < 3; i++)
-                    {
-                        firstEnemy.TakesDamage(random.Next(1, 5));
+                            }
+                        }
+                        break;
+                    case 3:
+                        {
+                            Console.WriteLine("The slime does nothing. It is worried about you trying to defend.");
+                        }
+                        break;
+                    case 4:
+                        {
+                            Console.WriteLine("You ran away successfully. Slimes are not known to be fast. Why did you run?");
+                        }
+                        break;
+                    default:
+                        {
+                            Console.WriteLine("This is not a valid input. The only valid input is an integer that is either 1, 2 or 3.");
+                        }
 
-                    }
-                }
-                else if (playerChoice == 3)
-                {
-                    Console.WriteLine("The slime does nothing. It is worried about you trying to defend.");
-                }
-                else if (playerChoice == 4)
-                {
-                    Console.WriteLine("You ran away successfully. Slimes are not known to be fast. Why did you run?");
-                }
-                else
-                {
-                    Console.WriteLine("This is not a valid input. The only valid input is an integer that is either 1, 2 or 3.");
+                        break;
                 }
                 player.PlayerTakesDamage(random.Next(1, 10));
             }
