@@ -61,6 +61,6 @@ public class Player
         PlayerHealth = PlayerHealth + heal_value;
 
         //Write that the player healed themselves.
-        Console.WriteLine(PlayerName + " healed themselves for " + heal_value + " amounts of hitpoints! You now have " + PlayerHealth + " remaining!");
+        Console.WriteLine(PlayerName + " healed themselves for " + heal_value + " amount of hitpoints! You now have " + PlayerHealth + " hitpoints remaining!");
     }
 }
