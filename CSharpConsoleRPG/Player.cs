@@ -29,6 +29,7 @@ public class Player
     /// <param name="hit_value"> The amount of damage the enemy will take. </param>
     public void PlayerTakesDamage(int hit_value)
     {
+        //Subtracts health value by the hit_value.
         PlayerHealth = PlayerHealth - hit_value;
 
         //Write that the enemy got hit.
@@ -59,6 +60,14 @@ public class Player
     public void Heal(int heal_value)
     {
         PlayerHealth = PlayerHealth + heal_value;
+
+        //If the player healt his higher than 100, it gets put to 100.
+        if (PlayerHealth > 100)
+        {
+            PlayerHealth= 100;
+        }
+        // Can also be changed to PlayerHealth = (PlayerHealth + heal_value > 100) ? (PlayerHealth + heal_value) : 100;
+
 
         //Write that the player healed themselves.
         Console.WriteLine(PlayerName + " healed themselves for " + heal_value + " amount of hitpoints! You now have " + PlayerHealth + " hitpoints remaining!");
