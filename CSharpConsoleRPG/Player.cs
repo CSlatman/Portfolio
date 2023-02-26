@@ -9,6 +9,9 @@ public class Player
     private int _playerLevel;
     public int PlayerLevel { get; set; }
 
+    private int _playerExperience;
+    public int PlayerExperience { get; set; }
+
     private int _playerHealth;
     public int PlayerHealth { get; set; }
 
@@ -67,6 +70,7 @@ public class Player
             PlayerHealth= 100;
         }
         // Can also be changed to PlayerHealth = (PlayerHealth + heal_value > 100) ? (PlayerHealth + heal_value) : 100;
+        // This is apparenty a ternary conditional opreator or statement? 
 
 
         //Write that the player healed themselves.
