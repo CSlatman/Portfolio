@@ -9,13 +9,25 @@ public class Player
     /// 
     /// </summary>
     private string _playerName;
-    public string PlayerName { get; set; }
+    public string PlayerName
+    {
+        get { return _playerName; }
+        set { _playerName = value; }
+    }
 
     private int _playerLevel;
-    public int PlayerLevel { get; set; }
+    public int PlayerLevel
+    {
+        get { return _playerLevel; }
+        set { _playerLevel = value; }
+    }
 
     private int _playerExperience;
-    public int PlayerExperience { get; set; }
+    public int PlayerExperience
+    {
+        get { return _playerExperience; }
+        set { _playerExperience = value; }
+    }
 
     private int _playerHealth;
     public int PlayerHealth { get; set; }

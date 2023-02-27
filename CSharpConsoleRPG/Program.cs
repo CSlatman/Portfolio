@@ -22,6 +22,7 @@
             }
             catch (Exception a)
             {
+                //Never gets used at this stage.
                 Console.WriteLine("You forgot to write a name, this results in this error: " + a.Message);
                 throw;
             }
