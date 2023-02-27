@@ -10,6 +10,7 @@ namespace CSharpConsoleRPG
     {
         public int EncounterType { get; set; }
 
+        
         /// <summary>
         /// 
         /// </summary>
