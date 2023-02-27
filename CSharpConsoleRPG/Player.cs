@@ -3,6 +3,11 @@ using CSharpConsoleRPG;
 
 public class Player
 {
+    // How doe encapsulation work again?
+    
+    /// <summary>
+    /// 
+    /// </summary>
     private string _playerName;
     public string PlayerName { get; set; }
 
