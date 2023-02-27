@@ -12,9 +12,9 @@ namespace GoeroeCalcPortfolio
         public void choice()
         {
             Console.WriteLine("Choose 1 for addition.");
-            Console.WriteLine("Choose 2 for subtraction");
-            Console.WriteLine("Choose 3 for multiplication");
-            Console.WriteLine("Choose 4 for division");
+            Console.WriteLine("Choose 2 for subtraction.");
+            Console.WriteLine("Choose 3 for multiplication.");
+            Console.WriteLine("Choose 4 for division.");
             //Console.WriteLine("Choose 5 for the quadrification");
             //Console.WriteLine("Choose 6 to find the square root of a number");
             Console.WriteLine("After entering a number such as 1, 2, 3 or 4. Press Enter.");
@@ -32,12 +32,12 @@ namespace GoeroeCalcPortfolio
 
             Console.WriteLine("You have chosen " + parsedChoice);
 
-            Console.WriteLine("Enter the first input. Then press Enter.");
+            Console.WriteLine("Enter the first input and then press Enter.");
             string UserInput1 = Console.ReadLine();
             int parsedInput1;
             int.TryParse(UserInput1, out parsedInput1);
 
-            Console.WriteLine("Enter the first input. Then press Enter.");
+            Console.WriteLine("Enter the second input and then press Enter.");
             string UserInput2 = Console.ReadLine();
             int parsedInput2;
             int.TryParse(UserInput2, out parsedInput2);
@@ -48,25 +48,71 @@ namespace GoeroeCalcPortfolio
                 case 1:
                     {
                         result = Addition(parsedInput1, parsedInput2);
-                        Console.WriteLine(result);
+
+                        if (result < 0)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Hello. The result is negative. THe result was: " + result);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Hello. The result is positive and above zero. The result was: " + result);
+                        }
                         break;
                     }
                 case 2:
+                    // In this case it shows me the else as well as the first if.
                     {
                         result = Subtraction(parsedInput1, parsedInput2);
-                        Console.WriteLine(result);
+                        
+                        
+                        if (result < 0)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                            Console.WriteLine("This is the if. Hello. The result is negative. THe result was: " + result);
+                        }
+                        else
+                        {
+                            Console.WriteLine("This is the else. The result is positive and above zero. The result was: " + result);
+                        }
+                        
+
+                        Console.ResetColor();
                         break;
                     }
                 case 3:
                     {
                         result = Multiplication(parsedInput1, parsedInput2);
-                        Console.WriteLine(result);
+
+                        if (result < 0)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Hello. The result is negative. THe result was: " + result);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Hello. The result is positive and above zero. The result was: " + result);
+                        }
                         break;
                     }
                 case 4:
                     {
                         result = Division(parsedInput1, parsedInput2);
-                        Console.WriteLine(result);
+
+                        if (result < 0)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Hello. The result is negative. THe result was: " + result);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Hello. The result is positive and above zero. The result was: " + result);
+                        }
                         break;
                     }
                 default:

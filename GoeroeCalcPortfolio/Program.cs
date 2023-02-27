@@ -9,10 +9,10 @@ namespace GoeroeCalcPortfolio
             Console.WriteLine("What do you want to do today?");
 
             calculator c = new calculator();
-           // c.choice();
+            c.choice();
 
-
-            
+            Console.WriteLine("This is a test to see if the colour changes back for the console in the case of a negative after leaving the switch.");
+            /*
             Console.WriteLine("Would you like to find the square root of a number?");
             try
             {
@@ -30,7 +30,7 @@ namespace GoeroeCalcPortfolio
             }
             
             
-
+            */
         }
     }
 }
