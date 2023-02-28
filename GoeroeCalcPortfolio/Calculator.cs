@@ -101,7 +101,13 @@ namespace GoeroeCalcPortfolio
                     }
                 case 4:
                     {
-                        result = Division(parsedInput1, parsedInput2);
+                        // This should run the division if parsedInput2 is NOT zero. Otherwise it will give the error message.
+                        if (parsedInput2 != 0)
+                        {
+                            result = Division(parsedInput1, parsedInput2);
+                        }
+                        else
+                        { Console.WriteLine("You tried to divide by zero. That's not possible."); }
 
                         if (result < 0)
                         {

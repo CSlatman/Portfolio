@@ -11,13 +11,10 @@ namespace GoeroeCalcPortfolio
             calculator c = new calculator();
             c.choice();
 
-            Console.WriteLine("This is a test to see if the colour changes back for the console in the case of a negative after leaving the switch.");
-            /*
             Console.WriteLine("Would you like to find the square root of a number?");
             try
             {
                 // If the user doesn't input anything, auto input becomes 0 due to the string being empty.
-                // 
                 string stringUserSquareRoot = Console.ReadLine();
                 double doubleUserSquareRoot;
                 double.TryParse(stringUserSquareRoot, out doubleUserSquareRoot);
@@ -30,7 +27,6 @@ namespace GoeroeCalcPortfolio
             }
             
             
-            */
         }
     }
 }
