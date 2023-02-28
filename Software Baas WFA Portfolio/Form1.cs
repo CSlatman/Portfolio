@@ -30,9 +30,13 @@ namespace Software_Baas_WFA_Portfolio
 
             txtBoxOutput.Text = InchOutput.ToString();
 
+            /*
+            //I tried creating a new form with show or showdialog but both are inappropriate.
             var inchForm = new Form();
             inchForm.Show(this); // if you need non-modal window
+            */
 
+            MessageBox.Show("You are " + InchOutput + " tall!");
             
 
         }
