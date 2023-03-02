@@ -32,9 +32,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btnChangeChannel = new System.Windows.Forms.Button();
+            this.radBtnOn = new System.Windows.Forms.RadioButton();
+            this.radBtnOff = new System.Windows.Forms.RadioButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -72,36 +72,39 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Which channel is on?";
             // 
-            // button1
+            // btnChangeChannel
             // 
-            this.button1.Location = new System.Drawing.Point(538, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnChangeChannel.Location = new System.Drawing.Point(459, 262);
+            this.btnChangeChannel.Name = "btnChangeChannel";
+            this.btnChangeChannel.Size = new System.Drawing.Size(154, 23);
+            this.btnChangeChannel.TabIndex = 4;
+            this.btnChangeChannel.Text = "Change Channel";
+            this.btnChangeChannel.UseVisualStyleBackColor = true;
+            this.btnChangeChannel.Click += new System.EventHandler(this.btnChangeChannel_Click);
             // 
-            // radioButton1
+            // radBtnOn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(138, 244);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 19);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radBtnOn.AutoSize = true;
+            this.radBtnOn.Location = new System.Drawing.Point(138, 244);
+            this.radBtnOn.Name = "radBtnOn";
+            this.radBtnOn.Size = new System.Drawing.Size(41, 19);
+            this.radBtnOn.TabIndex = 5;
+            this.radBtnOn.TabStop = true;
+            this.radBtnOn.Text = "On";
+            this.radBtnOn.UseVisualStyleBackColor = true;
+            this.radBtnOn.CheckedChanged += new System.EventHandler(this.radBtnOn_CheckedChanged);
             // 
-            // radioButton2
+            // radBtnOff
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(138, 266);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(94, 19);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radBtnOff.AutoSize = true;
+            this.radBtnOff.Location = new System.Drawing.Point(138, 266);
+            this.radBtnOff.Name = "radBtnOff";
+            this.radBtnOff.Size = new System.Drawing.Size(42, 19);
+            this.radBtnOff.TabIndex = 6;
+            this.radBtnOff.TabStop = true;
+            this.radBtnOff.Text = "Off";
+            this.radBtnOff.UseVisualStyleBackColor = true;
+            this.radBtnOff.CheckedChanged += new System.EventHandler(this.radBtnOff_CheckedChanged);
             // 
             // listBox1
             // 
@@ -119,9 +122,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.radBtnOff);
+            this.Controls.Add(this.radBtnOn);
+            this.Controls.Add(this.btnChangeChannel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
@@ -139,9 +142,9 @@
         private TextBox textBox2;
         private Label label1;
         private Label label2;
-        private Button button1;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private Button btnChangeChannel;
+        private RadioButton radBtnOn;
+        private RadioButton radBtnOff;
         private ListBox listBox1;
     }
 }
