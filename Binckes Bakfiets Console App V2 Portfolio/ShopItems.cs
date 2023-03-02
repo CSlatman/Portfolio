@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Binckes_Bakfiets_Console_App_V2_Portfolio
 {
-    public class Accessories : ShopItems
+    public class ShopItems
     {
+        public string ItemName { get; set; }
+        public int ItemPrice { get; set; }
+
 
     }
 }

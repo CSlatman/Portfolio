@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Binckes_Bakfiets_Console_App_V2_Portfolio
 {
-    internal class Bicycles
+    public class Bicycle : ShopItems
     {
+        public int BicycleType { get; set; }
+        public string BicycleGender { get; set; }
+
+
+        
     }
+
+
 }
