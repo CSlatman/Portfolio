@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Binckes_Bakfiets_Console_App_V2_Portfolio
 {
-    public class ShopItems
+    public class UserOrder
     {
-        public int ItemPrice { get; set; }
 
 
     }
