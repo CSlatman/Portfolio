@@ -16,15 +16,6 @@
 
 
 
-            // Choose a bicycle to rent
-
-            // Choose the different accessories to accompany it
-
-            // Choose for how long
-
-            // Checkout
-
-
 
         }
     }

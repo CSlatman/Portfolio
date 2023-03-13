@@ -8,7 +8,7 @@ namespace Binckes_Bakfiets_Console_App_V2_Portfolio
 {
     public class ShopItems
     {
-        public int ItemPrice { get; set; }
+        public double ItemPrice { get; set; }
 
 
     }
