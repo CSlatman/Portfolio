@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChrisGameRPG
 {
-    public class GameLoop
+    internal class Player
     {
-        
     }
 }
