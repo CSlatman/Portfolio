@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ChrisGameRPG
 {
-    internal class Player
+    public class Player
     {
+        private string _playerName;
+        public string PlayerName
+        {
+            get { return _playerName; }
+            set { _playerName = value; }
+        }
+
+
+
     }
 }
