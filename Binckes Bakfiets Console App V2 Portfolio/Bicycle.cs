@@ -12,6 +12,8 @@ namespace Binckes_Bakfiets_Console_App_V2_Portfolio
 
         // enum / array for bibycle types
 
+        public int BiccyelType { get; set; }
+
         /// <summary>
         /// This is the field for
         /// </summary>

@@ -23,7 +23,7 @@ namespace Binckes_Bakfiets_Console_App_V2_Portfolio
                 Console.WriteLine();
 
                 //Informs the user about the sequence in which the program asks questions.
-                Console.WriteLine("This program is sequenced in a way that you will which bicycle you would like first.");
+                Console.WriteLine("This program is sequenced in a way that you will choose which bicycle you would like first.");
                 Console.WriteLine("Second, you will select the relevant accessories you deem appropriate.");
                 Console.WriteLine("Third and last, we'll ask you how long you want to rent it,");
                 Console.WriteLine(" whereupon you can see the total and confirm or decline the transaction.");

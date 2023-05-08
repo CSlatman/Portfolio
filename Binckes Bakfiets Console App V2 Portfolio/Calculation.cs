@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Binckes_Bakfiets_Console_App_V2_Portfolio
 {
-    internal class Calculation
+    public class Calculation
     {
     }
 }
