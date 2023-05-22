@@ -10,15 +10,21 @@ namespace Binckes_Bakfiets_Console_App_V2_Portfolio
     public class Menu
     {
         // The first implementation of a menu for the user.
-        public bool choice()
+        public void choice()
         {
+            // This sets hte MenuChoice to be 0, in case the user doesn't want to enter the menu.
+            int MenuChoice = 0;
+            Console.WriteLine("Welcome to the Binckes Bakfiets application.");
+            Console.WriteLine("Do you wish to enter the menu, then press 1.");
 
-            /// This runs this loop while it's true and ít's true by default.
-            /// Might need to create an exit
-            do
+            string input = Console.ReadLine();
+            Int32.TryParse(input, out MenuChoice);
+
+            while (MenuChoice == 1)
             {
-                //Welcomes the user to the BB app.
-                Console.WriteLine("Welcome to the Binckes Bakfiets application.");
+                //Welcomes the user to the BB Menu.
+                Console.WriteLine("This is the Binckes Bakfiets Menu!");
+                
 
                 Console.WriteLine();
 
@@ -29,42 +35,15 @@ namespace Binckes_Bakfiets_Console_App_V2_Portfolio
                 Console.WriteLine(" whereupon you can see the total and confirm or decline the transaction.");
 
 
-                /*
-                // Choose a bicycle type to rent
-                Console.WriteLine("There are four different types of bicycle.");
-                Console.WriteLine("Press 0 for a mountain bike.");
-                Console.WriteLine("Press 1 for a racing bike.");
-                Console.WriteLine("Press 2 for a city bike.");
-                Console.WriteLine("Press 3 for a cargo bike.");
+
+                // This increases the before entered MenuChoice by 1, which then makes the while loop false.
+                MenuChoice++;
+                break;
                 
-                var bicycleType = Console.ReadLine();
-                
-
-
-                Bicycle UserBicycle = new Bicycle(bicycleType);
-                Console.WriteLine("You've selected a " + UserBicycle.BicycleTypes);
-                */
-
-                // Choose the gender of your bicycle.
-                Console.WriteLine("Now we would like you to select a gentleman's bike or a lady's bike.");
-                Console.WriteLine("Please type male or female.");
-                string bicycleGender = Console.ReadLine();
-
-                Bicycle UserBicycle = new Bicycle(bicycleGender);
-                Console.WriteLine("You've selected a " + UserBicycle.BicycleGender + " bike.");
-
-                //public Bicycle(string BicycleType, string BicycleGender, int BicycleSize
-                // Choose the different accessories to accompany it
-
-                // Choose for how long
-
-                // Checkout
-
 
 
 
             }
-            while (true);
 
         }
     }
