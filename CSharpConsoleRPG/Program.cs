@@ -10,9 +10,6 @@
             //instantiates the player class as an object.
             Player player = new Player();
 
-
-            Replay replay = new Replay();
-
             //Asks the player for their name and stores the name inside the object player.
             Console.WriteLine("What's your name?");
             try
@@ -36,6 +33,11 @@
 
             //Starts the first battle encounter
             Encounter firstEncounter = new Encounter(enemy, random, player);
+
+            Enemy enemy2 = new Enemy("Meowth the talking cat");
+
+            //Starts the second battle encounter
+            Encounter secondEncounter = new Encounter(enemy2, random, player);
 
 
             Console.WriteLine("Game over.");

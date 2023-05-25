@@ -24,7 +24,7 @@ public class Enemy
     /// <param name="_enemyName"></param>
     public Enemy(string name)
     {
-        EnemyHealth = 100;
+        EnemyHealth = 30;
 
         Name = name;
     }
