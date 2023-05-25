@@ -3,7 +3,7 @@ using CSharpConsoleRPG;
 
 public class Player
 {
-    // How doe encapsulation work again?
+    // How dow encapsulation work again?
     
     /// <summary>
     /// 
