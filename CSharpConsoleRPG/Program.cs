@@ -1,4 +1,7 @@
-﻿namespace CSharpConsoleRPG
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+
+namespace CSharpConsoleRPG
 {
     public class Program
     {
