@@ -2,6 +2,8 @@
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
 
 namespace JSONtestapp
 {
@@ -15,20 +17,15 @@ namespace JSONtestapp
 
             var options = new JsonSerializerOptions { WriteIndented = true };
             
-            string json = JsonSerializer.Serialize(customers, options);
+            string json = JsonConvert.SerializeObject(customers, Formatting.Indented);
             string fileName = "customers.json";
             File.WriteAllText(fileName, json);
 
             string jsonString = File.ReadAllText(fileName);
-
             Console.WriteLine(jsonString);
 
-
-            Customer customerList = JsonSerializer.Deserialize<Customer>(jsonString);
+            Customer customerlist = JsonConvert.DeserializeObject<Customer>(jsonString);
             
-
-            Console.WriteLine($"Name: {customerList.Name}");
-            Console.WriteLine($"Age: {customerList.Age}");
         }
     }
 }
