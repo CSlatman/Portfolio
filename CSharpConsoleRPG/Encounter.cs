@@ -29,6 +29,8 @@ namespace CSharpConsoleRPG
                 Console.WriteLine("2. A Three Strike Attack.");
                 Console.WriteLine("3. Defend.");
                 Console.WriteLine("4. Heal youreslf.");
+                Console.WriteLine("5. Make a savegame.");
+                Console.WriteLine("6. Load a savegame.");
 
                 int playerChoice = Convert.ToInt32(Console.ReadLine());
 
@@ -59,6 +61,19 @@ namespace CSharpConsoleRPG
                         {
                             Console.WriteLine("You are choosing to heal yourself.");
                             player.Heal(random.Next(5, 20));
+                        }
+                        break;
+                    case 5:
+                        {
+                            Console.WriteLine("You are choosing to save your game..");
+                            DatabaseJSON.J
+                            
+                        }
+                        break;
+                    case 6:
+                        {
+                            Console.WriteLine("You are choosing to load your game.");
+                            
                         }
                         break;
                     default:
