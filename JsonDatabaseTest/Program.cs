@@ -1,5 +1,12 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Security;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace JsonDatabaseTest
 {
@@ -8,11 +15,8 @@ namespace JsonDatabaseTest
         static void Main(string[] args)
         {
             JsonManager jsonManager = new JsonManager();
-            List<Klas> klassen = new List<Klas>();
-
-
-            // List<Student> studenten = jsonManager.InladenStudenten();
-            // List<Klas> klassen = jsonManager.InladenKlassen();
+            List<Student> studenten = jsonManager.InladenStudenten();
+            List<Klas> klassen = jsonManager.InladenKassen();
 
             Klas OvPS1 = new Klas("OvPS1");
             OvPS1.Locatie = "Online";
