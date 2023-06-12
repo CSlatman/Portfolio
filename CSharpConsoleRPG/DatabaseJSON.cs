@@ -10,7 +10,7 @@ namespace CSharpConsoleRPG
 {
     public class DatabaseJSON
     {
-        static void JSONSave()
+        public static void JSONSave()
         {
             Player player = new Player();
 
@@ -23,7 +23,7 @@ namespace CSharpConsoleRPG
 
         }
 
-        static void JSONLoad()
+        public static void JSONLoad()
         {
             string fileName = "player.json";
             string jsonString = File.ReadAllText(fileName);

@@ -66,14 +66,14 @@ namespace CSharpConsoleRPG
                     case 5:
                         {
                             Console.WriteLine("You are choosing to save your game..");
-                            DatabaseJSON.J
+                            DatabaseJSON.JSONSave();
                             
                         }
                         break;
                     case 6:
                         {
                             Console.WriteLine("You are choosing to load your game.");
-                            
+                            DatabaseJSON.JSONLoad();
                         }
                         break;
                     default:
