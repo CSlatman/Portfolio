@@ -13,6 +13,8 @@ namespace CSharpConsoleRPG
             //instantiates the player class as an object.
             Player player = new Player();
 
+            
+
             //Asks the player for their name and stores the name inside the object player.
             Console.WriteLine("What's your name?");
             try
