@@ -1,36 +1,81 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+
 
 namespace CSharpConsoleRPG
 {
     public class DatabaseJSON
     {
-        public static void JSONSave()
+        /// <summary>
+        /// These are the properties that show where to save the Folder and the file name of the player.
+        /// </summary>
+        public const string Folder = @"C:\JSON\";
+        public const string FilenamePlayer = "Player.json";
+        
+        /// <summary>
+        /// This methods saves the players' current health.
+        /// </summary>
+        public static void JSONSave(player)
         {
-            Player player = new Player();
-
-
-            var options = new JsonSerializerOptions { WriteIndented = true };
-
-            string json = JsonSerializer.Serialize(player);
-            string fileName = "player.json";
-            File.WriteAllText(fileName, json);
-
+            using (StreamWriter file = File.CreateText(Folder + FilenamePlayer))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, player);
+            }
         }
 
+
+        /// <summary>
+        /// This method loads the players' current health.
+        /// </summary>
         public static void JSONLoad()
         {
-            string fileName = "player.json";
-            string jsonString = File.ReadAllText(fileName);
-            Player player = JsonSerializer.Deserialize<Player>(jsonString);
+            Player player = new Player();
+            if (CheckPlayerFile())
+            {
+                using (StreamReader file = File.OpenText(Folder + FilenamePlayer))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    player = (List<Klas>)serializer.Deserialize(file, typeof(List<Klas>));
 
 
-            Console.WriteLine($"Name: {player.PlayerName}");
+                }
+            }
         }
+
+        #region Code to make sure the sourcefiles for 'Player' are copied to the working directory and can be found.
+
+
+
+        private bool CheckPlayerFile()
+        {
+            bool fileExists = File.Exists(Folder + FilenamePlayer);
+            if (!fileExists)
+            {
+                string sourceFilePlayer = DefineSourceFileDirectory() + FilenamePlayer;
+                if (File.Exists(sourceFilePlayer))
+                {
+                    File.Copy(sourceFilePlayer, Folder + FilenamePlayer);
+                }
+                fileExists = File.Exists(Folder + FilenamePlayer);
+            }
+            return fileExists;
+        }
+
+        private string DefineSourceFileDirectory()
+        {
+            string sourceFileDirectory = Directory.GetCurrentDirectory().ToLower();
+            string binDirectory = Path.DirectorySeparatorChar + "bin" + Path.DirectorySeparatorChar;
+            if (sourceFileDirectory.Contains(binDirectory))
+                sourceFileDirectory = sourceFileDirectory.Remove(sourceFileDirectory.LastIndexOf(binDirectory));
+            sourceFileDirectory += Path.DirectorySeparatorChar + "bestanden" + Path.DirectorySeparatorChar;
+            return sourceFileDirectory;
+        }
+
+        #endregion
     }
 }

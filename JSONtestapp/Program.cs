@@ -30,6 +30,7 @@ namespace JSONtestapp
             Console.WriteLine($"Name: {customer1.Name}");
             Console.WriteLine($"Age: {customer1.Age}");
 
+
         }
     }
 }
