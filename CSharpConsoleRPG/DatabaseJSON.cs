@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,11 +41,12 @@ namespace CSharpConsoleRPG
                 using (StreamReader file = File.OpenText(Folder + FilenamePlayer))
                 {
                     JsonSerializer serializer = new JsonSerializer();
-                    player = (List<Klas>)serializer.Deserialize(file, typeof(List<Klas>));
+                    player = JsonConvert.DeserializeObject<Player>(json);
 
 
                 }
             }
+            return player;
         }
 
         #region Code to make sure the sourcefiles for 'Player' are copied to the working directory and can be found.
