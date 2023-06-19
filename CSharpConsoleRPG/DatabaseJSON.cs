@@ -17,37 +17,7 @@ namespace CSharpConsoleRPG
         public const string Folder = @"C:\JSON\";
         public const string FilenamePlayer = "Player.json";
         
-        /// <summary>
-        /// This methods saves the players' current health.
-        /// </summary>
-        public static void JSONSave(player)
-        {
-            using (StreamWriter file = File.CreateText(Folder + FilenamePlayer))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, player);
-            }
-        }
 
-
-        /// <summary>
-        /// This method loads the players' current health.
-        /// </summary>
-        public static void JSONLoad()
-        {
-            Player player = new Player();
-            if (CheckPlayerFile())
-            {
-                using (StreamReader file = File.OpenText(Folder + FilenamePlayer))
-                {
-                    JsonSerializer serializer = new JsonSerializer();
-                    player = JsonConvert.DeserializeObject<Player>(json);
-
-
-                }
-            }
-            return player;
-        }
 
         #region Code to make sure the sourcefiles for 'Player' are copied to the working directory and can be found.
 
