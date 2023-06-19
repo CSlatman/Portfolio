@@ -37,12 +37,12 @@ namespace CSharpConsoleRPG
             Monster enemy = new Monster("Enemy Dave");
 
             //Starts the first battle encounter
-            Encounter firstEncounter = new Encounter(enemy, random, player);
+            Combat firstEncounter = new Combat(enemy, random, player);
 
             Monster enemy2 = new Monster("Meowth the talking cat");
 
             //Starts the second battle encounter
-            Encounter secondEncounter = new Encounter(enemy2, random, player);
+            Combat secondEncounter = new Combat(enemy2, random, player);
 
 
             Console.WriteLine("Game over.");

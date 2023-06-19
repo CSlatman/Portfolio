@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Enemy
+public class Monster
 { 
     /// <summary>
     /// The name of the enemy.
@@ -19,12 +19,13 @@ public class Enemy
     public bool IsDead { get; set; }
 
     /// <summary>
-    /// 
+    /// This is the constructor of the monster where you enter the name.
+    /// It creates a monster with 50 health points and the name assigned to it.
     /// </summary>
     /// <param name="_enemyName"></param>
-    public Enemy(string name)
+    public Monster(string name)
     {
-        EnemyHealth = 30;
+        EnemyHealth = 50;
 
         Name = name;
     }

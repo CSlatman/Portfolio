@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpConsoleRPG
 {
-    public class Encounter
+    public class Combat
     {
         public int EncounterType { get; set; }
 
@@ -17,7 +17,7 @@ namespace CSharpConsoleRPG
         /// <param name="enemy"></param>
         /// <param name="random"></param>
         /// <param name="player"></param>
-        public Encounter(Enemy enemy, Random random, Player player) 
+        public Combat(Monster enemy, Random random, Player player) 
         {
             Console.WriteLine(player.PlayerName + " , you have encountered " + enemy.Name + "! What would you like to do?");
 
