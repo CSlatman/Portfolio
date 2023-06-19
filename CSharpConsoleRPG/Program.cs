@@ -34,12 +34,12 @@ namespace CSharpConsoleRPG
             Console.WriteLine("Welcome " + player.PlayerName + ". We're glad to see you!");
 
             //the random and player have already been assigned to variables, this assigns the enemy name to the enem yvariable.
-            Enemy enemy = new Enemy("Enemy Dave");
+            Monster enemy = new Monster("Enemy Dave");
 
             //Starts the first battle encounter
             Encounter firstEncounter = new Encounter(enemy, random, player);
 
-            Enemy enemy2 = new Enemy("Meowth the talking cat");
+            Monster enemy2 = new Monster("Meowth the talking cat");
 
             //Starts the second battle encounter
             Encounter secondEncounter = new Encounter(enemy2, random, player);
