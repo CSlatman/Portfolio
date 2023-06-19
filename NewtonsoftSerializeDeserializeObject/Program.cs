@@ -10,7 +10,8 @@ namespace NewtonsoftSerializeDeserializeObject
     {
         static void Main(string[] args)
         {
-           
+           Account account = new Account(1, "name", "password", "email");
+
             Console.ReadLine();
         }
     }

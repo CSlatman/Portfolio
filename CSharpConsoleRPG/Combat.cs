@@ -63,19 +63,6 @@ namespace CSharpConsoleRPG
                             player.Heal(random.Next(5, 20));
                         }
                         break;
-                    case 5:
-                        {
-                            Console.WriteLine("You are choosing to save your game..");
-                            DatabaseJSON.JSONSave();
-                            
-                        }
-                        break;
-                    case 6:
-                        {
-                            Console.WriteLine("You are choosing to load your game.");
-                            DatabaseJSON.JSONLoad();
-                        }
-                        break;
                     default:
                         {
                             Console.WriteLine("This is not a valid input. The only valid input is an integer that is either 1, 2 or 3.");

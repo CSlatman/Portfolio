@@ -8,9 +8,17 @@ namespace NewtonsoftSerializeDeserializeObject
 {
     public class Account
     {
+        public int AccountId { get; set; }
+        public string AccountName { get; set; }
+        public string Password { get; set; }
         public string Email { get; set; }
-        public bool Active { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public IList<string> Roles { get; set; }
+
+        public Account(int accountId, string accountName, string password, string email)
+        {
+            AccountId = accountId;
+            AccountName = accountName;
+            Password = password;
+            Email = email;
+        }
     }
 }

@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace NewtonsoftSerializeDeserializeObject
 {
-    public class JSONData
+    public class JSONManager
     {
+        public const string Folder = @"C:\JSON\";
+        public const string FileNameAccount = "Account.json";
+
         public void Serialize()
         {
 
