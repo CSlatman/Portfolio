@@ -11,12 +11,23 @@ public class Monster
     /// The health of the enemy.
     /// </summary>
     private int _enemyHealth;
-    public int EnemyHealth { get; set; }
+    
+    public int EnemyHealth
+    {
+        get { return _enemyHealth; }
+        set { _enemyHealth = value; }
+    }
 
     /// <summary>
     /// Determines whether the enemy is dead or alive.
     /// </summary>
     public bool IsDead { get; set; }
+
+    /// <summary>
+    /// List of Monsters for the combat.
+    /// </summary>
+    public List<Monster> Monsters { get; set; }
+
 
     /// <summary>
     /// This is the constructor of the monster where you enter the name.
@@ -49,13 +60,14 @@ public class Monster
         }
     }
 
-    private void Die()
+    private string Die()
     {
+        if (IsDead = true);
         //Write to the console that you have defeated the enemy.
-        Console.WriteLine(Name + " has died!");
+        return (Name + " has died!");
 
         //Sets the boolean that the enemy has died.
-        IsDead = true;
+        
     }
 }
 

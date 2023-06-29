@@ -14,12 +14,13 @@ namespace NewtonsoftSerializeDeserializeObject
 
         public void Serialize()
         {
+            // Account account1 = JsonConvert.SerializeObject<Account>(File.WriteAllText(@"c:\JSON\movie.json"));
 
         }
 
         public void Deserialise()
         {
-            Account account1 = JsonConvert.DeserializeObject<Account>(File.ReadAllText(@"c:\movie.json"));
+            Account account1 = JsonConvert.DeserializeObject<Account>(File.ReadAllText(@"c:\JSON\movie.json"));
 
             // deserialize JSON directly from a file
             using (StreamReader file = File.OpenText(@"c:\movie.json"))

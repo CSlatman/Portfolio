@@ -39,7 +39,7 @@ namespace CSharpConsoleRPG
                     case 1:
                         {
                             Console.WriteLine("You have attacked the " + enemy + "! How cruel!");
-                            enemy.TakesDamage(random.Next(10, 50));
+                            enemy.TakesDamage(random.Next(10, 10));
                         }
                         break;
                     case 2:
@@ -70,7 +70,7 @@ namespace CSharpConsoleRPG
 
                         break;
                 }
-                player.PlayerTakesDamage(random.Next(1, 10));
+                player.PlayerTakesDamage(random.Next(30, 100));
             }
         }
 
