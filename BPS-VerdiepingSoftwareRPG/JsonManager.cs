@@ -15,7 +15,16 @@ namespace BPS_VerdiepingSoftwareRPG
         public const string Folder = @"C:\JSON\";
         public const string FilenameMonster = "Monster.json";
 
-        
+        public static string Serialize<T>(T data)
+        {
+            return JsonConvert.SerializeObject(data);
+        }
+
+        public static T Deserialize<T>(string json)
+        {
+            return JsonConvert.DeserializeObject<T>(json);
+        }
+
 
         public List<Monster> SaveMonster()
         {
