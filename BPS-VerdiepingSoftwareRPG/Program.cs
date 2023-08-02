@@ -19,19 +19,19 @@
             monsters.Add(monster3);
             monsters.Add(monster4);
 
-            string json = JsonManager.Serialize(monsters);
-            Console.WriteLine("Serialized JSON:");
-            Console.WriteLine(json);
+            //string json = JsonManager.Serialize(monsters);
+            //Console.WriteLine("Serialized JSON:");
+            //Console.WriteLine(json);
 
-            List<Monster> deserializedMonsters = JsonManager.Deserialize<List<Monster>>(json);
-            Console.WriteLine("\nDeserialized Monsters:");
-            foreach (Monster monster in deserializedMonsters)
-            {
-                Console.WriteLine("Name: " + monster.Name);
-                Console.WriteLine("Health: " + monster.Health);
-                Console.WriteLine("Attack Power: " + monster.AttackPower);
-                Console.WriteLine();
-            }
+            //List<Monster> deserializedMonsters = JsonManager.Deserialize<List<Monster>>(json);
+            //Console.WriteLine("\nDeserialized Monsters:");
+            //foreach (Monster monster in deserializedMonsters)
+            //{
+            //    Console.WriteLine("Name: " + monster.Name);
+            //    Console.WriteLine("Health: " + monster.Health);
+            //    Console.WriteLine("Attack Power: " + monster.AttackPower);
+            //    Console.WriteLine();
+            //}
 
 
             /* Random random = new Random();
