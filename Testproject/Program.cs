@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Tracing;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Testproject
 {
@@ -25,13 +26,13 @@ namespace Testproject
             int[] getallen2 = new int[10];
             for (int i = 0; i < getallen2.Length; i++)
             {
-                Console.WriteLine(getallen2[i] = (i+1) * 5);
+                Console.WriteLine(getallen2[i] = (i + 1) * 5);
             }
 
             Console.WriteLine("break for List");
             // List tests
             List<int> getallenlist = new List<int>();
-            for (int i = 0; i <10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 getallenlist.Add(10 * 10);
             }
@@ -60,7 +61,28 @@ namespace Testproject
                 s = word + " ";
                 Console.WriteLine(s);
             }
+
+
+            // Contains and IndexOf methods that work for List
+            List<string> talen = new List<string>() { "Java", "C#", "Pyrhon" };
+
+            if (talen.Contains("C#"))
+            {
+                Console.WriteLine("C# komt voor in de lijst!");
+            }
+
+            int index = talen.IndexOf("Java");
+            Console.WriteLine("Java staat op index " + index);
+
+            //Does an item appear in the list? Contains
+            // Does an item appear inthe list + what place is it at ? Index Of?
+
+            //The methods also work with strings
+
             
+
+
+
 
         }
     }
