@@ -7,7 +7,35 @@ namespace Testproject
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("What's your first name?");
+            string firstName = Console.ReadLine();
 
+            Console.WriteLine("What's your last name?");
+            string lastName = Console.ReadLine();
+
+            if (firstName == "Christiaan" && lastName == "Slatman")
+            {
+                Console.WriteLine("Hallo Christiaan Slatman.");
+            }
+            else if (firstName == "Christiaan")
+            {
+                Console.WriteLine("Nice to meet another Christiaan.");
+            }
+            else if (lastName == "Slatman")
+            {
+                Console.WriteLine("Are you related to Christiaan Slatman?");
+            }
+            else
+            {
+                Console.WriteLine("Hello new person.");
+            }
+
+
+
+
+
+
+            /*
             // Array tests
             double[] getallen = new double[10];
 
@@ -78,9 +106,7 @@ namespace Testproject
             // Does an item appear inthe list + what place is it at ? Index Of?
 
             //The methods also work with strings
-
-            
-
+            */
 
 
 
