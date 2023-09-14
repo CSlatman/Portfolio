@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Player player = new Player();
+            Monster monster = new Monster("Meowth the talking cat");
             GameManager gameManager = new GameManager();
             Database database = new Database("player.json");
 

@@ -19,5 +19,7 @@ namespace BPS_CSharp_Console_RPG
             Console.WriteLine($"Health: {Health}");
             // Display other player information
         }
+
+
     }
 }

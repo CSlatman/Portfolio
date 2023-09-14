@@ -45,5 +45,13 @@ namespace BPS_CSharp_Console_RPG
 
             Console.WriteLine("Game saved successfully!");
         }
+
+        public void Death(Player player)
+        {
+            if (player.Health <= 0)
+            {
+                Console.WriteLine("You're dead.");
+            }
+        }
     }
 }
