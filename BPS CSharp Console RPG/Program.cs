@@ -20,7 +20,7 @@
                 Console.WriteLine("4. Exit");
                 Console.Write("Enter your choice: ");
 
-                int choice = ConsoleUtils.ReadIntInput(1, 4);
+                int choice = InputHandler.ReadIntInput(1, 4);
 
                 switch (choice)
                 {

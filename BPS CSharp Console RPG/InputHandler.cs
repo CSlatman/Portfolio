@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BPS_CSharp_Console_RPG
 {
-    public class ConsoleUtils
+    public class InputHandler
     {
         public static string GetUserInput(string message)
         {

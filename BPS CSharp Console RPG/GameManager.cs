@@ -13,7 +13,7 @@ namespace BPS_CSharp_Console_RPG
             Console.WriteLine("\nStarting a New Game...");
 
             // Logic for character creation and game initialization
-            player.Name = ConsoleUtils.GetUserInput("Enter your character's name: ");
+            player.Name = InputHandler.GetUserInput("Enter your character's name: ");
             player.Level = 1;
             player.Health = 100;
 
