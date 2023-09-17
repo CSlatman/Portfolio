@@ -11,13 +11,14 @@ namespace BPS_CSharp_Console_RPG
         public string Name { get; set; }
         public int Level { get; set; }
         public int Health { get; set; }
+        public int Damage { get; set; }
 
         public void DisplayInfo()
         {
-            Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"Level: {Level}");
-            Console.WriteLine($"Health: {Health}");
-            // Display other player information
+            DialoguePresenter.DisplayMessage($"Name: {Name}");
+            DialoguePresenter.DisplayMessage($"Level: {Level}");
+            DialoguePresenter.DisplayMessage($"Health: {Health}");
+            DialoguePresenter.DisplayMessage($"Damage: {Damage}");
         }
 
 

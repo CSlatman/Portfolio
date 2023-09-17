@@ -8,50 +8,68 @@ namespace BPS_CSharp_Console_RPG
 {
     public class GameManager
     {
+        private List<Monster> monsters;
+        private Random random;
+        private Database database;
+
+        public GameManager()
+        {
+            InitializeMonsters();
+            random = new Random();
+            database = new Database();
+        }
+
+        private void InitializeMonsters()
+        {
+            monsters = new List<Monster>
+            {
+                new Monster { Name = "Goblin", Health = 30, Damage = 5 },
+                new Monster { Name = "Orc", Health = 50, Damage = 8 },
+                new Monster { Name = "Dragon", Health = 100, Damage = 15 }
+                // Add more monsters as needed
+            };
+        }
+
         public void StartNewGame(Player player)
         {
-            Console.WriteLine("\nStarting a New Game...");
+            DialoguePresenter.DisplayMessage("\nStarting a New Game...");
 
-            // Logic for character creation and game initialization
             player.Name = InputHandler.GetUserInput("Enter your character's name: ");
             player.Level = 1;
             player.Health = 100;
+            player.Damage = 10;
 
-            Console.WriteLine($"Welcome, {player.Name}! Your adventure begins.");
+            DialoguePresenter.DisplayMessage($"Welcome, {player.Name}! Your adventure begins.");
             player.DisplayInfo();
-
-            // Continue with the game's storyline and gameplay
         }
 
         public void LoadGame(Player player)
         {
-            Console.WriteLine("\nLoading Game...");
+            DialoguePresenter.DisplayMessage("\nLoading Game...");
 
-            // Logic for loading a saved game state
-            // (This part remains the same)
-
-            Console.WriteLine("Game loaded successfully!");
-            player.DisplayInfo();
-
-            // Continue with the loaded game state
+            if (File.Exists("player.json"))
+            {
+                player = database.LoadData<Player>();
+                DialoguePresenter.DisplayMessage("Game loaded successfully!");
+                player.DisplayInfo();
+            }
+            else
+            {
+                DialoguePresenter.DisplayMessage("No saved game found.");
+            }
         }
 
         public void SaveGame(Player player)
         {
-            Console.WriteLine("\nSaving Game...");
+            DialoguePresenter.DisplayMessage("\nSaving Game...");
 
-            // Logic for saving the game state
-            // (This part remains the same)
-
-            Console.WriteLine("Game saved successfully!");
+            database.SaveData(player);
+            DialoguePresenter.DisplayMessage("Game saved successfully!");
         }
 
-        public void Death(Player player)
+        public Monster GetRandomMonster()
         {
-            if (player.Health <= 0)
-            {
-                Console.WriteLine("You're dead.");
-            }
+            return monsters[random.Next(monsters.Count)];
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BPS_CSharp_Console_RPG
 {
@@ -11,6 +12,7 @@ namespace BPS_CSharp_Console_RPG
         /// <summary>
         /// The name of the enemy.
         /// </summary>
+        private string _name;
         public string Name { get; set; }
 
         /// <summary>
@@ -19,22 +21,19 @@ namespace BPS_CSharp_Console_RPG
         private int _health;
         public int Health { get; set; }
 
+        public int Damage { get; set; }
+
         /// <summary>
         /// Determines whether the enemy is dead or alive.
         /// </summary>
         private int _isDead;
         public bool IsDead { get; set; }
 
-        /// <summary>
-        /// This is the constructor of the monster where you enter the name.
-        /// It creates a monster with 50 health points and the name assigned to it.
-        /// </summary>
-        /// <param name="_enemyName"></param>
-        public Monster(string name)
+        public void DisplayInfo()
         {
-            Health = 50;
-
-            Name = name;
+            DialoguePresenter.DisplayMessage($"Monster: {Name}");
+            DialoguePresenter.DisplayMessage($"Health: {Health}");
+            DialoguePresenter.DisplayMessage($"Damage: {Damage}");
         }
         /// <summary>
         /// This is called when the enemy is hit.

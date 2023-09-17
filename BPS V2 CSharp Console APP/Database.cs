@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace BPS_CSharp_Console_RPG
+namespace BPS_V2_CSharp_Console_APP
 {
     public class Database
     {
         public const string Folder = @"C:\JSON\";
-        public const string FilenamePlayer = "MainPlayer.json";
+        public const string FilenamePlayer = "Player.json";
 
         private string saveFilePath;
 
@@ -54,6 +54,8 @@ namespace BPS_CSharp_Console_RPG
             }
         }
 
+        #region Code to make sure the sourcefiles for 'Player' are copied to the working directory and can be found.
+
         private bool CheckPlayerFile()
         {
             string sourceFilePlayer = DefineSourceFileDirectory() + FilenamePlayer;
@@ -75,7 +77,7 @@ namespace BPS_CSharp_Console_RPG
             sourceFileDirectory += Path.DirectorySeparatorChar + "bestanden" + Path.DirectorySeparatorChar;
             return sourceFileDirectory;
         }
+
+        #endregion
     }
 }
-
-
