@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Tracing;
+using System.Formats.Asn1;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Testproject
@@ -7,20 +8,23 @@ namespace Testproject
     {
         static void Main(string[] args)
         {
-            int j = 2;
-            for (int i = 1; i < 100;
-                 i = i * 2)
+            int area = 0;
+            int height = 0;
+            int width = 2;
+
+            while (area < 50)
             {
-                j = j - 1;
-                while (j < 25)
-                {
-                    // How many times will
-                    // the next statement
-                    // be executed? 7 times
-                    j = j + 5;
-                    Console.WriteLine(j);
-                }
+                height++;
+                area = width * height;
+                Console.WriteLine("while area is " + area);
             }
+
+            do 
+            {
+                width--;
+                area = width * height;
+                Console.WriteLine("Do while area is " + area);
+            } while (area > 50);
 
         }
     }
